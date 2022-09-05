@@ -1,8 +1,8 @@
 #!/usr/bin/node
-// script that prints 3 lines
+let firstMessage = 'C is fun'
+let secondMessage = 'Python is cool'
+let thirdMessage = 'JavaScript is amazing'
 
-const myVar = ['C is fun', 'Python is cool', 'JavaScript is amazing'];
-
-console.log(myVar[0]);
-console.log(myVar[1]);
-console.log(myVar[2]);
+console.log(firstMessage);
+console.log(secondMessage);
+console.log(thirdMessage);
