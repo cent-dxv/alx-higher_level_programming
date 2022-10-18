@@ -1,60 +1,35 @@
-# 0x13. JavaScript - Objects, Scopes and Closures
+# Javascript - Objects, Scopes and Closures
+### This directory is for learning about Javascript OOP. Below is a description of all the files contained in this directory.
 
-## Resources
+#### [0-rectangle.js](./0-rectangle.js)
+* JS empty class Rectangle that defines a rectangle.
 
-### Read or watch:
+#### [1-rectangle.js](./1-rectangle.js)
+* JS class Rectangle that defines a rectangle, with a constructor.
 
-* JavaScript object basics
-* Object-oriented JavaScript (read all examples!)
-* Class - ES6
-* super - ES6
-* extends - ES6
-* Object prototypes
-* Inheritance in JavaScript
-* Closures
-* this/self
-* Modern JS
+#### [2-rectangle.js](./2-rectangle.js)
+* JS class Rectangle that defines a rectangle, checks constructor values correct format.
 
-## Learning Objectives
+#### [3-rectangle.js](./3-rectangle.js)
+* JS class Rectangle that defines a rectangle, with print method.
 
-At the end of this project, you are expected to be able to explain to anyone, without the help of Google:
+#### [4-rectangle.js](./4-rectangle.js)
+* JS class Rectangle that defines a rectangle, with rotate and double methods.
 
-### General
+#### [5-square.js](./5-square.js)
+* JS class Square that defines a square and inherits from Rectangle of `4-rectangle.js`.
 
-* Why JavaScript programming is amazing
-* How to create an object in JavaScript
-* What this means
-* What undefined means
-* Why the variable type and scope is important
-* What is a closure
-* What is a prototype
-* How to inherit an object from another
+#### [6-square.js](./6-square.js)
+* JS  class Square that defines a square and inherits from Square of `5-square.js`.
 
-## Requirements
+#### [7-occurrences.js](./7-occurrences.js)
+* JS function that returns the number of occurrences in a list.
 
-### General
+#### [8-esrever.js](./8-esrever.js)
+* JS function that returns the reversed version of a list.
 
-* Allowed editors: vi, vim, emacs
-* All your files will be interpreted on Ubuntu 20.04 LTS using node (version 14.x)
-* All your files should end with a new line
-* The first line of all your files should be exactly #!/usr/bin/node
-* A README.md file, at the root of the folder of the project, is mandatory
-* Your code should be semistandard compliant. Rules of Standard + semicolons on top. Also as reference: AirBnB style
-* All your files must be executable
-* The length of your files will be tested using wc
-* You are not allowed to use var
+#### [9-logme.js](./9-logme.js)
+* JS function that prints the number of arguments already printed and the new argument value.
 
-## More Info
-
-### Install Node 14
-
-```
-$ curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
-$ sudo apt-get install -y nodejs
-```
-
-### Install semi-standard
-
-```
-$ sudo npm install semistandard --global
-```
+#### [10-converter.js](./10-converter.js)
+* JS function that converts a number from base 10 to another base passed as argument.

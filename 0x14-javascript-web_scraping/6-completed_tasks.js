@@ -1,21 +1,16 @@
 #!/usr/bin/node
-const axios = require('axios').default;
-const url = process.argv[2];
-axios.get(url)
-  .then((response) => {
-    const completedTasks = {};
-    const tasks = response.data;
-    tasks.forEach((task) => {
-      if (task.completed) {
-        if (task.userId in completedTasks) {
-          completedTasks[task.userId]++;
-        } else {
-          completedTasks[task.userId] = 1;
-        }
+const request = require('request');
+request(process.argv[2], function (error, response, body) {
+  if (!error) {
+    const todos = JSON.parse(body);
+    const completed = {};
+    todos.forEach((todo) => {
+      if (todo.completed && completed[todo.userId] === undefined) {
+        completed[todo.userId] = 1;
+      } else if (todo.completed) {
+        completed[todo.userId] += 1;
       }
     });
-    console.log(completedTasks);
-  })
-  .catch((error) => {
-    console.log(error);
-  });
+    console.log(completed);
+  }
+});

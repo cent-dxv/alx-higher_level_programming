@@ -1,12 +1,5 @@
 #!/usr/bin/node
-// script that prints the addition of 2 integers
-
 function add (a, b) {
-  return a + b;
+  return parseInt(a) + parseInt(b);
 }
-const { argv } = require('process');
-
-const a = parseInt(argv[2]);
-const b = parseInt(argv[3]);
-
-console.log(add(a, b));
+console.log(add(process.argv[2], process.argv[3]));

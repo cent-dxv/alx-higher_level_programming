@@ -1,7 +1,10 @@
 #!/usr/bin/python3
-""" an empty class """
+"""
+This module contains an empty class
+
+"""
 
 
-class BaseGeometry:
-    """ empty class """
+class BaseGeometry(object):
+    """BaseGeometry Class Empty"""
     pass

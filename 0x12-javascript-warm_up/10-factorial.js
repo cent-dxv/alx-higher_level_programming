@@ -1,14 +1,8 @@
 #!/usr/bin/node
-// script that computes and prints a factorial
-
-function factorial (number) {
-  if (!number) {
+function factorial (x) {
+  if (!x || x === 0) {
     return 1;
   }
-  return number * factorial(number - 1);
+  return factorial(x - 1) * x;
 }
-
-const { argv } = require('process');
-const number = parseInt(argv[2]);
-
-console.log(factorial(number));
+console.log(factorial(process.argv[2]));

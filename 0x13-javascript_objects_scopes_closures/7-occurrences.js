@@ -1,11 +1,11 @@
 #!/usr/bin/node
-// function that returns the number of occurrences in a list
+// Function that returns the number of occurences in a list
 exports.nbOccurences = function (list, searchElement) {
-  let count = 0;
-  for (const i in list) {
-    if (list[i] === searchElement) {
-      count++;
+  let occurences = 0;
+  for (const item of list) {
+    if (item === searchElement) {
+      occurences += 1;
     }
   }
-  return count;
+  return occurences;
 };

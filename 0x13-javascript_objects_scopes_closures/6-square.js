@@ -6,4 +6,4 @@ class Square extends require('./5-square') {
   }
 }
 
-module.exports = Square;are;
+module.exports = Square;

@@ -1,11 +1,12 @@
 #!/usr/bin/node
-// class Rectangle that defines a rectangle
+// Rectangle class that has a constructor with height and width
 class Rectangle {
   constructor (w, h) {
-    if (h > 0 && w > 0) {
+    if (Number.isInteger(w) && Number.isInteger(h) && w > 0 && h > 0) {
       this.width = w;
       this.height = h;
     }
   }
 }
+
 module.exports = Rectangle;

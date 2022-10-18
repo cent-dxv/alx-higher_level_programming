@@ -1,35 +1,35 @@
-#include <stddef.h>
-#include <stdio.h>
 #include "lists.h"
 
 /**
- * is_palindrome - check if a linked list is a palindrome
- *
- * @head: first node
- *
- * Return: 1 if success
- *         0 if failed
+ * is_palindrome - Check if a linked list is a palindrome.
+ * @head: Points to the first element of the list.
+ * Return: 1 if the list is palindrome, otherwise 0.
  */
 int is_palindrome(listint_t **head)
 {
-  listint_t *tmp = *head;
-  int values[2048], i = 0, cLoop, limit;
+	listint_t *current;
+	int new_array[4096];
+	int size_list = 0, half_size = 0, i = 0;
 
-  if (head == NULL || *head == NULL)
-    return (1);
+	if (!head)
+		return (1);
 
-  while (tmp != NULL)
-    {
-      values[i] = tmp->n;
-      i++;
-      tmp = tmp->next;
-    }
+	current = *head;
+	while (current)
+	{
+		new_array[size_list] = current->n;
+		current = current->next;
+		size_list++;
+	}
 
-  limit = (i % 2 == 0) ? i / 2 : (i + 1) / 2;
+	size_list--;
+	half_size = size_list / 2;
 
-  for (cLoop = 0; cLoop < limit; cLoop++)
-    if (values[cLoop] != values[i - 1 - cLoop])
-      return (0);
+	for (i = 0; i <= half_size; i++, size_list--)
+	{
+		if (new_array[i] != new_array[size_list])
+			return (0);
+	}
 
-  return (1);
+	return (1);
 }

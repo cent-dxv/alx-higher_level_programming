@@ -1,8 +1,7 @@
 #!/usr/bin/node
-// function that executes x times a function.
-exports.callMeMoby = function (x, theFunction) {
-  let y = 0;
-  for (; y < x; y++) {
+const callMeMoby = function (x, theFunction) {
+  for (let times = x; times > 0; times--) {
     theFunction();
   }
 };
+exports.callMeMoby = callMeMoby;
